@@ -1,49 +1,8 @@
 const { R } = require("redbean-node");
 const { log } = require("../src/util");
-const Alerta = require("./notification-providers/alerta");
-const AlertNow = require("./notification-providers/alertnow");
-const AliyunSms = require("./notification-providers/aliyun-sms");
-const Apprise = require("./notification-providers/apprise");
-const Bark = require("./notification-providers/bark");
-const ClickSendSMS = require("./notification-providers/clicksendsms");
-const DingDing = require("./notification-providers/dingding");
-const Discord = require("./notification-providers/discord");
-const Feishu = require("./notification-providers/feishu");
-const FreeMobile = require("./notification-providers/freemobile");
-const GoogleChat = require("./notification-providers/google-chat");
-const Gorush = require("./notification-providers/gorush");
-const Gotify = require("./notification-providers/gotify");
-const HomeAssistant = require("./notification-providers/home-assistant");
-const Line = require("./notification-providers/line");
-const LineNotify = require("./notification-providers/linenotify");
-const LunaSea = require("./notification-providers/lunasea");
-const Matrix = require("./notification-providers/matrix");
-const Mattermost = require("./notification-providers/mattermost");
-const Ntfy = require("./notification-providers/ntfy");
-const Octopush = require("./notification-providers/octopush");
-const OneBot = require("./notification-providers/onebot");
-const PagerDuty = require("./notification-providers/pagerduty");
-const PromoSMS = require("./notification-providers/promosms");
-const Pushbullet = require("./notification-providers/pushbullet");
-const PushDeer = require("./notification-providers/pushdeer");
-const Pushover = require("./notification-providers/pushover");
-const Pushy = require("./notification-providers/pushy");
-const RocketChat = require("./notification-providers/rocket-chat");
-const SerwerSMS = require("./notification-providers/serwersms");
-const Signal = require("./notification-providers/signal");
-const Slack = require("./notification-providers/slack");
-const SMSEagle = require("./notification-providers/smseagle");
-const SMTP = require("./notification-providers/smtp");
-const Squadcast = require("./notification-providers/squadcast");
-const Stackfield = require("./notification-providers/stackfield");
-const Teams = require("./notification-providers/teams");
-const TechulusPush = require("./notification-providers/techulus-push");
+
 const Telegram = require("./notification-providers/telegram");
-const Webhook = require("./notification-providers/webhook");
-const WeCom = require("./notification-providers/wecom");
-const GoAlert = require("./notification-providers/goalert");
-const SMSManager = require("./notification-providers/smsmanager");
-const ServerChan = require("./notification-providers/serverchan");
+
 
 class Notification {
 
@@ -56,50 +15,7 @@ class Notification {
         this.providerList = {};
 
         const list = [
-            new Alerta(),
-            new AlertNow(),
-            new AliyunSms(),
-            new Apprise(),
-            new Bark(),
-            new ClickSendSMS(),
-            new DingDing(),
-            new Discord(),
-            new Feishu(),
-            new FreeMobile(),
-            new GoogleChat(),
-            new Gorush(),
-            new Gotify(),
-            new HomeAssistant(),
-            new Line(),
-            new LineNotify(),
-            new LunaSea(),
-            new Matrix(),
-            new Mattermost(),
-            new Ntfy(),
-            new Octopush(),
-            new OneBot(),
-            new PagerDuty(),
-            new PromoSMS(),
-            new Pushbullet(),
-            new PushDeer(),
-            new Pushover(),
-            new Pushy(),
-            new RocketChat(),
-            new ServerChan(),
-            new SerwerSMS(),
-            new Signal(),
-            new SMSManager(),
-            new Slack(),
-            new SMSEagle(),
-            new SMTP(),
-            new Squadcast(),
-            new Stackfield(),
-            new Teams(),
-            new TechulusPush(),
             new Telegram(),
-            new Webhook(),
-            new WeCom(),
-            new GoAlert(),
         ];
 
         for (let item of list) {
