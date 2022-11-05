@@ -3,7 +3,7 @@
  * node "server/server.js"
  * DO NOT require("./server") in other modules, it likely creates circular dependency!
  */
-console.log("Welcome to Uptime Kuma");
+console.log("Welcome to Marvel Cloud");
 
 // As the log function need to use dayjs, it should be very top
 const dayjs = require("dayjs");
@@ -25,7 +25,7 @@ const args = require("args-parser")(process.argv);
 const { sleep, log, getRandomInt, genSecret, isDev } = require("../src/util");
 const config = require("./config");
 
-log.info("server", "Welcome to Uptime Kuma");
+log.info("server", "Welcome to Marvel Cloud");
 log.debug("server", "Arguments");
 log.debug("server", args);
 
